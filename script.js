@@ -10,9 +10,13 @@ function convertValue() { //passo 3 - Criar função que irá acontecer quando o
     //variaveis de conversão//
     const dolarToday = 5.4 //passo 5 - Definir o valor da conversão (dolar e Euro)//
     const euroToday = 6.4
+    const bitcoinToday = 0.0000020
+    const libraToday = 0.136
 
     const ConvertedDollar = inputValue / dolarToday //passo 6 - Fazer a conversão do valor que quer converter com o valor da moeda//
     const ConvertedEuro = inputValue / euroToday
+    const ConvertedBitcoin = inputValue * bitcoinToday
+    const ConvertedLibra = inputValue * libraToday
 
 
     //Definindo onde vou deixar os valores que quero converter e que foi convertido//
@@ -22,7 +26,7 @@ function convertValue() { //passo 3 - Criar função que irá acontecer quando o
 
 
 
-    //condições para mudar a moeda//
+    //condições para mudar a moeda dolar//
     if (currencySelect.value == "dolar") { //passo 9 - Se o valor selecionado no select for "dolar" faça//
         valueConverted.innerHTML = new Intl.NumberFormat("en-US", { //passo 10 - Colocar o valor convertido no local selecionado na DIV (formatado usando "intl.NumberFormat)//
             style: "currency",
@@ -30,13 +34,29 @@ function convertValue() { //passo 3 - Criar função que irá acontecer quando o
         }).format(ConvertedDollar)
     }
 
+    //condições para mudar a moeda euro//
     if (currencySelect.value == "euro") { //passo 9 - Se o valor selecionado no select for "euro" faça//
         valueConverted.innerHTML = new Intl.NumberFormat("de-DE", { //passo 10 - Colocar o valor convertido no local selecionado na DIV (formatado usando "intl.NumberFormat)//
             style: "currency",
             currency: "EUR"
         }).format(ConvertedEuro)
-
     }
+
+    //condições para mudar a moeda libra//
+    if (currencySelect.value == "libra") {
+        valueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(ConvertedLibra)
+    }
+
+    if (currencySelect.value == "bitcoin") {
+        valueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "BTC"
+        }).format(ConvertedBitcoin)
+    }
+
 
 
 
@@ -70,6 +90,17 @@ function changeSection() {
         Textconverted.innerHTML = 'Euro' //passo 13 - alterando paragrafo que diz qual o tipo da moeda//
         ImgConverted.src = './assent/euro.png' //passo 13 - alterando imagem do tipo da moeda//
     }
+
+    if (currencySelect.value == 'libra') {
+        Textconverted.innerHTML = 'Libra' //passo 13 - alterando paragrafo que diz qual o tipo da moeda//
+        ImgConverted.src = './assent/libra.png' //passo 13 - alterando imagem do tipo da moeda//
+    }
+
+    if (currencySelect.value == 'bitcoin') {
+        Textconverted.innerHTML = 'Bitcoin' //passo 13 - alterando paragrafo que diz qual o tipo da moeda//
+        ImgConverted.src = './assent/bitcoin.png' //passo 13 - alterando imagem do tipo da moeda//
+    }
+
 
     //passo 14//
     convertValue() //definindo que dentro de uma função, também chame a primeira função que criamos//
