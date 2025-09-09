@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+body {
+    background-color: #8A51FC;
+
+}
+
+.logo-gif {
+    width: 300px;
+    display: block;
+    margin: 20px auto;
+    /* centraliza a imagem, se eu digo que os lados é automatico ele poe no meio */
+}
+
+main {
+    /* div, main, section, imagem, todos ja vem como display block (ocupa toda a linha, apenas dele) */
+    width: 375px;
+    border-radius: 20px;
+    background: #F4F4F4;
+    padding: 44px 24px 24px 23px;
+    margin: 16px auto;
+
+}
+
+label {
+    /* rótulo do campo */
+    color: #777;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 50px;
+}
+
+select {
+    width: 100%;
+    /*ocupar todo o seu espaço*/
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #BBB;
+    background: #FFF;
+    margin-top: 6px;
+    margin-bottom: 24px;
+    color: #555;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    padding-left: 17px;
+}
+select:hover {
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    appearance: none;
+    padding-left: 18px;
+    border: 1px solid #BBB;
+    background: #FFF;
+    margin-top: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #555;
+}
+
+button {
+    width: 100%;
+    height: 48px;
+    border-radius: 5px;
+    background: #772FD3;
+    margin-top: 23px;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+button:active{
+    opacity: 0.6;
+}
+
+section {
+
+    border-radius: 20px;
+    border: 1px solid #772FD3;
+    margin-top: 36px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.currency-name {
+    color: #777;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.currency-value-convert, .currency-value-converted {
+    color: #555;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.result-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 4px;
+}

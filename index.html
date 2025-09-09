@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Convert Money</title>
+</head>
+
+<body>
+    <img class="logo-gif" src="assent/logo.gif" alt="Logo Convert Money">
+
+    <main>
+
+        <label> Converter <strong>De</strong>
+            <select>
+                <option>R$ Real Brasileiro</option>
+            </select>
+        </label>
+
+        <label> Converter <strong>Para</strong>
+            <select id="currency-select"> <!--acrescentando o "id" para selecionar no JS-->
+                <option value="dolar">US$ Dólar</option> <!--acrescentando o "value" pois é oque vai aparecer no console-->
+                <option value="euro">€ Euro</option>
+            </select>
+        </label>
+
+        <label>Valor
+            <input class="input-value" placeholder="Digite o valor">
+        </label>
+
+        <button id="convert-button">Converter</button>
+
+
+        <section>
+            <div class="result-content">
+                <img src="assent/real.png" alt="Real">
+                <p class="currency-name">Real</p>
+                <p class="currency-value-convert">R$ 0</p>
+            </div>
+
+            <img class="arrow" src="assent/Vector.png" alt="Seta">
+
+            <div class="result-content">
+                <img id="img-dolar" src="assent/dolar.png" alt="Dolar Americano">
+                <p class="currency-name" id="text-converted">Dolar Americano</p>
+                <p class="currency-value-converted">US$ 0</p>
+            </div>
+        </section>
+
+    </main> 
+
+</body>
+<script src="script.js"></script>
+</html>
